@@ -1,0 +1,11 @@
+body {
+    background-color: #ffb77d;
+}
+
+.content {
+    text-align: center;
+}
+
+#gameWindow {
+    display: inline-block;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tipgk_lab",
+  "version": "1.0.0",
+  "description": "Examples & howto use some features of phaser framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nevaan/tipgk_lab.git"
+  },
+  "keywords": [
+    "university",
+    "phaser",
+    "labs"
+  ],
+  "author": "Pawel Losek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nevaan/tipgk_lab/issues"
+  },
+  "homepage": "https://github.com/Nevaan/tipgk_lab#readme",
+  "dependencies": {
+    "phaser": "2.6.2"
+  },
+  "devDependencies": {
+    "bower": "1.8.0"
+  }
+}
