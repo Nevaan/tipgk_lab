@@ -1,24 +1,20 @@
 requirejs.config({
     baseUrl: './',
     paths: {
-        Phaser: 'node_modules/phaser/build/phaser'
+        Phaser: 'node_modules/phaser/build/phaser',
+        GameStates: 'src/states/GameStates'
     }
 });
 
-require(['Phaser'],
-    function(Phaser)
-    {
-        window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameWindow', { preload: preload, create: create, update: update });
+require(['Phaser', 'GameStates'],
+    function(Phaser, GameStates) {
+        var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'gameWindow');
 
-        function preload()
-        {
-        }
+        game.state.add('boot', GameStates.boot);
+        game.state.add('load', GameStates.load);
+        game.state.add('menu', GameStates.menu);
+        game.state.add('game', GameStates.game);
 
-        function create()
-        {
-        }
-
-        function update()
-        {
-        }
-    });
+        game.state.start('boot');
+    }
+);
