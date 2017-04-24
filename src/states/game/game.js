@@ -27,19 +27,25 @@ define(function() {
 
         this.mainLoop.play();
 
-        this.game.stage.backgroundColor = "#7e8652";
+
         this.escKey = this.game.input.keyboard
           .addKey(Phaser.Keyboard.ESC);
 
         this.arrowLeft = this.game.input.keyboard
           .addKey(Phaser.Keyboard.LEFT);
-
         this.arrowRight = this.game.input.keyboard
           .addKey(Phaser.Keyboard.RIGHT);
+        this.arrowTop = this.game.input.keyboard
+          .addKey(Phaser.Keyboard.UP);
+        this.arrowBottom = this.game.input.keyboard
+          .addKey(Phaser.Keyboard.DOWN);
+
+        this.arrowRight.onDown.add(this.goRight, this);
+        this.arrowLeft.onDown.add(this.goLeft, this);
+        this.arrowTop.onDown.add(this.goTop, this);
+        this.arrowBottom.onDown.add(this.goBottom, this);
 
         this.escKey.onDown.add(this.endGame, this);
-        this.arrowLeft.onDown.add(this.goLeft, this);
-        this.arrowRight.onDown.add(this.goRight, this);
     }
 
 
@@ -48,7 +54,8 @@ define(function() {
     }
 
     function update () {
-    
+        
+        this.game.stage.backgroundColor = "#7e8652";
     }
 
     function goRight () {
@@ -57,6 +64,14 @@ define(function() {
 
     function goLeft () {
         this.logo.x -= STEP_SIZE;
+    }
+
+    function goTop () {
+        this.logo.y -= STEP_SIZE;
+    }
+
+    function goBottom () {
+        this.logo.y += STEP_SIZE;
     }
 
     function endGame () {
@@ -72,6 +87,8 @@ define(function() {
         render   : render,
         endGame  : endGame,
         goLeft   : goLeft,
-        goRight  : goRight
+        goRight  : goRight,
+        goTop    : goTop,
+        goBottom : goBottom
     };
 });
