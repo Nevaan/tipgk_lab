@@ -43,9 +43,9 @@ define(['Phaser'] , function(Phaser) {
     function createPolygon(path) {
         var poly = new Phaser.Polygon();
         poly.setTo(path);
-        ellipse.beginFill(0x105286);
-        ellipse.drawPolygon(poly);
-        ellipse.endFill();
+        polygon.beginFill(0x105286);
+        polygon.drawPolygon(poly);
+        polygon.endFill();
     }
 
     function createRectangle(x,y,width,height) {
