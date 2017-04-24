@@ -6,3 +6,4 @@ Material created using resources:
 - http://phaser.io/docs/2.4.4/Phaser.State.html (State documentation)
 - https://www.sitepoint.com/javascript-game-programming-using-phaser/
 - http://www.html5gamedevs.com/topic/1372-phaser-function-order-reserved-names-and-special-uses/ (Phaser developer about states)
+- https://phaser.io/docs/2.6.2/Phaser.Graphics.html (Graphics doc)

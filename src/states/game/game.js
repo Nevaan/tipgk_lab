@@ -1,26 +1,25 @@
-define(['Phaser'], function(Phaser) {
+define(function() {
 
-    var circle;
-    function create() {
-
-        this.game.stage.backgroundColor = "#c8c025";
-
-        var g = this.game.add.graphics(0,0);
-        g.beginFill(0xFF0000, 0.5);
-        circle = g.drawCircle(300, 300, 100);
+    function preload() {
+        this.logo = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'phaserLogo');
+        this.logo.anchor.setTo(0.5);
     }
 
-    function render() {
+    function create() {
+        this.game.stage.backgroundColor = "#7e8652";
+    }
 
+
+    function render() {
     }
 
     function update() {
-
     }
 
 
     return {
         create: create,
+        preload: preload,
         update: update,
         render: render
     }
