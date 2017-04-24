@@ -1,8 +1,6 @@
 define(function() {
 
     function preload() {
-        this.logo = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'phaserLogo');
-        this.logo.anchor.setTo(0.5);
     }
 
     function create() {
