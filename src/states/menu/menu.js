@@ -4,7 +4,6 @@ define(function() {
         this.game.stage.backgroundColor = "#366e9f";
         this.logo = this.add.sprite(this.game.world.centerX, this.game.world.centerY - 75, 'phaserLogo');
         this.logo.anchor.setTo(0.5);
-        //this.game.state.start('game');
     }
 
     function create() {
