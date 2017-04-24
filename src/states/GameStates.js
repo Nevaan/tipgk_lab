@@ -4,10 +4,11 @@
 
 requirejs.config({
     paths: {
-        boot: 'src/states/boot/boot',
-        load: 'src/states/load/load',
-        menu: 'src/states/menu/menu',
-        game: 'src/states/game/game'
+        boot : 'src/states/boot/boot',
+        load : 'src/states/load/load',
+        menu : 'src/states/menu/menu',
+        game : 'src/states/game/game',
+        level: 'src/states/game/level/level'
     }
 });
 
